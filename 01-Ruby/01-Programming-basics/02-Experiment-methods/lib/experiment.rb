@@ -11,21 +11,26 @@ end
 def belongs_to?(a_string, a_word)
   # TODO: return true if a_string contains a_word
   # example: belongs_to?("hey jude", "jude") => true
+  a_string.include? a_word
 end
 
 def replace(initial_string, old_letter, new_letter)
   # TODO: return a copy of the string with the new letter replacing the old one
   # example: replace("casanova", "a", "o") => "cosonovo"
+  initial_string.gsub(old_letter , new_letter)
 end
 
 def exactly_divide(an_integer, a_divider)
   # TODO: return divison of an_integer by a_divider (computing the floating division, NOT the euclidean one)
   # example: exactly_divide(13, 4) => 3.25
+  an_integer/a_divider.to_f
 end
+
 
 def is_divisible_by_two(an_integer)
   # TODO: return true if an_integer is divisible by 2
   # example: is_divisible_by_two(6) => true
+  if an_integer
 end
 
 def random_subset(an_array, sample_size)

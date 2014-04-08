@@ -5,7 +5,7 @@ def ask_and_get(param)
   #- Ask the user to write a value for param
   #- Get and return the string inputted by the user
   puts "What's your #{param} ?"
-  param = gets.chomp.to_s
+  gets.chomp.to_s
 end
 
 

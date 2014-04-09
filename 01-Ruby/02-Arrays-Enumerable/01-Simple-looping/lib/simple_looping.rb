@@ -16,9 +16,9 @@ end
 def sum_with_for(min,max)
   #TODO: return the sum of the integers between min and max
   #CONSTRAINT: you should use a for..end structure
-   sum = 0
+  sum = 0
    for i in min..max #= i va s'executer entre min et max dans la méthode
-     sum += i
+    sum += i
    end
   sum                #la boucle redémarre
 end
@@ -27,12 +27,14 @@ def sum_recursive(min,max)
   #TODO (optional): return the sum of the integers between min and max
   #CONSTRAINT: you should use a recursive algorithm, i.e. the method should call itself
   #recursion = s'appeler soit même à l'intérieur de sa méthode
+  if min > max
+    raise ArgumentError
+  end
+  if min == max
+    max
 
-    if min == max
-     max
-
-    else
-     min + sum_recursive(min+1,max)
-    end
+  else
+    min + sum_recursive(min+1,max)
+  end
 end
 

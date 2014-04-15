@@ -28,7 +28,6 @@ def asking_for_card?(score)
   return false if score > 21
 
   puts "Card ? (Type 'yes' for a new card)"
-  print "> "
   input = gets.chomp
 
   if input == 'yes'

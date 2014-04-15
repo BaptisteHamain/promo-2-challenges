@@ -17,6 +17,7 @@ def most_successfull(number, max_year, file_name)
   end
 
   array.keep_if { |info| info[:year] < max_year }
+  array.sort_by! { |info| -info[:earnings] }
   array.take(number)
 
 end

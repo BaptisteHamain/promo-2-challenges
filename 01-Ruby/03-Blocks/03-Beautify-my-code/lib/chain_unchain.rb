@@ -1,5 +1,5 @@
 def shuffle_word(a_word)
-  a_word.upcase.chars.shuffle
+  shuffle_array = a_word.upcase.chars.shuffle
 end
 
 

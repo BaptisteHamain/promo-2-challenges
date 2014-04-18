@@ -1,4 +1,5 @@
 class UI
+
   TASKS = {
     list: "- List all recipes [list]",
     add:  "- Add a new recipe [add]",
@@ -12,26 +13,48 @@ class UI
   end
 
   def list
-    # TODO: call the appropriate controller method with the proper argument(s)
-    # TODO: format and display the retrieved data in a numbered list
+    @controller.list_recipes.each_with_index do |recipe, index|
+      puts "#{index + 1}. #{recipe} (miam)"
+    end
   end
 
   def add
+    puts "which recipe do you want to add?"
+
+    recipe = gets.chomp
+
+    @controller.add_recipe(recipe)
+
+    puts "the recipe #{recipe} has been added"
+
     # TODO: ask the user a recipe name
     # TODO: call the appropriate controller method with the proper argument(s)
   end
 
   def del
+    puts "which recipe do you want to delete (enter the <id>)?"
+
+    index = gets.chomp.to_i
+
+    deleted_recipes = @controller.delete_recipe(index - 1)
+
+    puts "the recipe #{deleted_recipes} has been deleted"
+
     # TODO: ask the user a recipe index
     # TODO: call the appropriate controller method with the proper argument(s)
   end
 
   def exit
+    at_exit do
+     puts "Goodbye, my dear friend."
+    end
+
     # TODO: exit the program
     # Hint: Take a look at the display method !
   end
 
   def user_input
+    gets.chomp
     # TODO: Get the user input and return it
     # [OPTIONAL] You can think of the case where the user
     # enters a wrong choice.

@@ -1,17 +1,8 @@
-# This is how you define your own custom exception classes
+require_relative "transaction"
 class DepositError < StandardError
 end
 
 class BankAccount
-
-  # Contract for the BankAccount class
-  # - you can access full owner's name and position, but partial IBAN
-  # - you cannot access full IBAN
-  # - you can print partial account infos
-  # - you can print transactions only with a password
-  # - you can withdraw or deposit money
-  # - You can see the balance of the account (through the position variable)
-
   MIN_DEPOSIT =  100
 
   def initialize(name, iban, initial_deposit, password)
@@ -63,7 +54,7 @@ class BankAccount
   private
 
   def add_transaction(amount)
-    @transactions << amount
+    @transactions << Transaction.new(amount)
     @position += amount
   end
 

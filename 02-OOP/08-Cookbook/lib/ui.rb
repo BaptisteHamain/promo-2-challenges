@@ -1,5 +1,4 @@
 class UI
-
   TASKS = {
     list: "- List all recipes [list]",
     add:  "- Add a new recipe [add]",
@@ -13,47 +12,40 @@ class UI
   end
 
   def list
-    @controller.list.each_with_index do |recipe, index|
-      puts "#{index + 1}. #{recipe} (miam)"
+    # TODO: call the appropriate controller method with the proper argument(s)
+    # TODO: format and display the retrieved data in a numbered list
+    @controller.list.each_with_index do |item, index|
+      puts "#{index + 1}. #{item}"
     end
   end
 
   def add
-    puts "which recipe do you want to add?"
-
-    recipe = gets.chomp
-
-    @controller.add(recipe)
-
-    puts "the recipe #{recipe} has been added"
-
     # TODO: ask the user a recipe name
+    puts "Which recipe do you want to add?"
     # TODO: call the appropriate controller method with the proper argument(s)
+    name = gets.chomp
+    @controller.add(name)
   end
 
   def del
-    puts "which recipe do you want to delete (enter the <id>)?"
-
-    index = gets.chomp.to_i
-
-    deleted_recipes = @controller.delete(index - 1)
-
-    puts "the recipe #{deleted_recipes} has been deleted"
-
     # TODO: ask the user a recipe index
+    puts "Which index do you want to delete"
     # TODO: call the appropriate controller method with the proper argument(s)
+    index = gets.chomp.to_i
+    @controller.delete(index - 1)
   end
 
   def exit
+    # TODO: exit the program
+    # Hint: Take a look at the display method !
     @running = false
-    puts "Goodbye, my dear friend."
   end
 
   def user_input
-    gets.chomp
     # TODO: Get the user input and return it
     # [OPTIONAL] You can think of the case where the user
     # enters a wrong choice.
+    gets.chomp
   end
 
   def display
@@ -88,5 +80,6 @@ class UI
   # To understand this, read the doc : http://ruby-doc.org/core-2.1.1/Object.html#method-i-send
   def dispatch(task)
     self.send(task.to_sym)
+
   end
 end

@@ -10,29 +10,27 @@ class Cookbook
     load_csv(file)
   end
 
-  def find(index)
-    @recipes[index]
+  def all
+    @recipes
   end
 
   def create(recipe)
     @recipes << recipe
-    CSV.open(@file, "a") do |csv|
-        csv << [recipe]
-    end
+    save(recipe)
   end
 
   def destroy(index)
-
     @recipes.delete_at(index)
-
-    CSV.open(@file, "wb") do |csv|
-      @recipes.each do |recipe|
-        csv << [recipe]
-      end
-    end
-
+    save(index)
   end
+
   # TODO: Implement a save method that will write the data into the CSV
+  def save(recipe)
+    CSV.open(@file, "w") do |csv|
+        csv << [recipe]
+    end
+  end
+
   # And don't forget to use this save method when you have to modify something in your recipes array.
 
   private

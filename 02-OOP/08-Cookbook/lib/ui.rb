@@ -13,7 +13,7 @@ class UI
   end
 
   def list
-    @controller.list_recipes.each_with_index do |recipe, index|
+    @controller.list.each_with_index do |recipe, index|
       puts "#{index + 1}. #{recipe} (miam)"
     end
   end
@@ -23,7 +23,7 @@ class UI
 
     recipe = gets.chomp
 
-    @controller.add_recipe(recipe)
+    @controller.add(recipe)
 
     puts "the recipe #{recipe} has been added"
 
@@ -36,7 +36,7 @@ class UI
 
     index = gets.chomp.to_i
 
-    deleted_recipes = @controller.delete_recipe(index - 1)
+    deleted_recipes = @controller.delete(index - 1)
 
     puts "the recipe #{deleted_recipes} has been deleted"
 
@@ -45,12 +45,8 @@ class UI
   end
 
   def exit
-    at_exit do
-     puts "Goodbye, my dear friend."
-    end
-
-    # TODO: exit the program
-    # Hint: Take a look at the display method !
+    @running = false
+    puts "Goodbye, my dear friend."
   end
 
   def user_input

@@ -24,7 +24,7 @@ end
 
 def top_five_rock_artists(db)
   #TODO: return list of top 5 rock artists
-  db.execute( " SELECT artist.name, COUNT(track.Name)
+  db.execute( " SELECT artist.name
                 FROM track
                 INNER JOIN album, artist, genre
                 ON track.albumId = album.albumId

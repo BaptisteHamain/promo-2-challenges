@@ -19,3 +19,4 @@ end
 def long_tracks(db, min_length)
   db.execute( "SELECT Name FROM Track WHERE Milliseconds > #{min_length}*60000 ").flatten
 end
+

@@ -17,8 +17,5 @@ def love_tracks(db)
 end
 
 def long_tracks(db, min_length)
-  #TODO: return tracks verifying: duration > min_length (minutes)
   db.execute( "SELECT Name FROM Track WHERE Milliseconds > #{min_length}*60000 ")
 end
-
-puts long_tracks(db, 2)

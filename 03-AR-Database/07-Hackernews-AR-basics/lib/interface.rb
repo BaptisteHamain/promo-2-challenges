@@ -21,9 +21,9 @@ while true
     name = ask_and_get("name")
     source_url = ask_and_get("source url")
     rating = ask_and_get("rating")
-
+    post = {name: name, source_url: source_url, date: Time.now, rating: rating}
     #TODO: use ActiveRecord to add a new entry to the DB
-    post = Post.create!(name: name, source_url: source_url, date: Time.now, rating: rating)
+    post = Post.create(post)
 
   when 2
 

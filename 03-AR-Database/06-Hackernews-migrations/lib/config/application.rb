@@ -1,3 +1,4 @@
+require 'yaml'
 require 'sqlite3'
 require 'active_record'
 require 'pathname'

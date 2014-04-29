@@ -7,7 +7,7 @@ class Dessert
   attr_accessor :name, :calories
 
   def healthy?
-    @calories < 200 ? true : false
+    @calories < 200
   end
 
   def delicious?
@@ -24,7 +24,6 @@ class JellyBean < Dessert
 attr_reader :flavor
 
   def delicious?
-    @flavor == "black licorice" ? false : true
+    @flavor != "black licorice"
   end
-
 end

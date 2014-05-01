@@ -1,5 +1,30 @@
 .container {
-  margin: 0 auto;  
+  margin: 0 auto;
   width: 720px;
 	font-family: 'Open Sans', sans-serif;
 }
+
+.inline {
+  display: inline;
+}
+
+.padding-right {
+  padding-left: 3em;
+}
+
+header {
+  border-bottom: 1px dotted grey;
+  padding: 10px;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+

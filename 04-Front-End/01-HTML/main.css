@@ -1,0 +1,26 @@
+body {
+  margin : 0;
+  padding : 0;
+}
+
+header {
+  background-color: #3333DD;
+  height: 10%;
+  color : #FFFFFF;
+  padding: 20px;
+}
+
+article {
+  padding: 20px;
+}
+
+ul {
+  width : 80%;
+}
+
+li {
+  display : inline;
+  background-color: cyan;
+  color: black;
+  padding : 5px 50px 5px 50px;
+}

@@ -5,17 +5,30 @@
   <title>Blog</title>
   <!--Normalize CSS-->
   <link href="normalize.css" rel="stylesheet" type='text/css'>
-  
+
   <!--Your CSS-->
   <link href="main.css" rel="stylesheet" type='text/css'>
-  
+
 </head>
 <body>
   <div class="container">
-    
-    <!--YOUR FORM HERE-->
-    
+    <form>
+      <fieldset>
+       <legend>Vos coordonnées :</legend>
+        <label>First name: </label>
+          <input type="text" name="firstname">
+        <label>Last name: </label>
+          <input type="text" name="lastname">
+        <label>Email: </label>
+            <input type="text" name="email">
+      </fieldset>
+      <p>
+        <input type="submit" value="Valider" />
+        <input type="reset" value="Annuler" />
+      </p>
+    </form>
   </div>
 </body>
 </html>
+
 

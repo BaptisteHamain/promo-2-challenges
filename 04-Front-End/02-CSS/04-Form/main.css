@@ -1,6 +1,33 @@
 .container {
-  margin: 0 auto;  
+  margin: 2em;
   width: 840px;
 }
 
-/*Add some CSS rules to design your form */ 
+/*Add some CSS rules to design your form */
+
+form {
+ background-color:#CAE0DD;
+ padding:1em;
+ width:17em;
+ }
+fieldset {
+ padding:1em;
+ margin-bottom:1em;
+ border:0.1em solid #39E5CE;
+ }
+legend {
+ text-align: center;
+ color:#39E5CE;
+ font-weight:bold
+ }
+label {
+ margin-top:1em;
+ display:block;
+ font-weight:bold
+ }
+input[type=submit], input[type=reset] {
+ width:100px;
+ margin-left:0.5em;
+ box-shadow:0.1em 0.1em 0.1em #39E5CE;
+ cursor:pointer;
+ }

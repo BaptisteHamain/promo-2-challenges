@@ -1,0 +1,182 @@
+/* =============================================================================
+   Begin
+   ========================================================================== */
+
+.container {
+  margin: 0 auto;
+  width: 840px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.nav-content {
+  margin: 0 auto;
+}
+
+.content {
+  padding-top: 10px;
+}
+
+.padding {
+  padding: 1em 3em 0 0 ;
+}
+
+.right {
+  float: right
+}
+
+body {
+  background-image:url(img/back.png);
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin : 1em;
+  background: none;
+  color: black;
+  right: 0;
+  left: 0;
+  padding: 0;
+}
+
+nav {
+  display: inline;
+}
+
+nav a {
+  display: inline;
+  line-height: 3em;
+
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+
+article {
+  text-align: center;
+  margin : 1em 1em 1em 1em;
+}
+
+h1 {
+  color: white;
+  margin : 0.5em;
+  font-size: 3em;
+  font-family: "Calibri", sans-serif;
+  font-weight: 300;
+}
+
+h2 {
+  color: white;
+  margin : 1em 0 0 0;
+  font-size: 3em;
+  font-family: "Calibri", sans-serif;
+}
+
+.weight {
+
+}
+
+.center {
+  text-align: center
+}
+
+.buttons {
+  margin-top:50px;
+  position: center;
+}
+.buttons li {
+  display: inline-block;
+  width: 35%; /* 270px */
+  margin: 0 1.6666666666665%; /* 20px */
+  text-align: left;
+}
+.buttons a {
+  display: block;
+  font-size: 1.57em;
+  padding: 7.407407407407%;
+  z-index: 0;
+  position: relative;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #333;
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  background: rgb(255,255,255); /* Old browsers */
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 50%, rgba(237,237,237,1) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba(255,255,255,1)), color-stop(100%,rgba(237,237,237,1))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 50%,rgba(237,237,237,1) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255,255,255,1) 50%,rgba(237,237,237,1) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255,255,255,1) 50%,rgba(237,237,237,1) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 50%,rgba(237,237,237,1) 100%); /* W3C */
+}
+.buttons a {
+  -webkit-box-shadow:  0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+  box-shadow:  0px 1px 2px 0px rgba(0, 0, 0, 0.4);
+}
+.buttons span {
+  font-family: 'QuicksandBook', Arial, sans-serif;
+  font-size: 0.6em;
+  display: block;
+  color: #999;
+}
+.buttons a:hover span {
+  color: #333;
+}
+.buttons a:before {
+  content: "";
+  position: absolute;
+  height: 55px;
+  width: 55px;
+  background-image:url(../img/icon_sprite.png);
+  z-index: 1;
+  top: 50%;
+  margin-top: -27px;
+  left: 8.148148148148%;
+}
+
+
+/* Facebook Button */
+
+.buttons .facebook a {
+  padding-left: 27.777777777778%;
+}
+.buttons .facebook a:hover {
+  color: #3c5a98;
+}
+.buttons .facebook a:before {
+  background-position: 0px 0px;
+  left: 11.111111111111%;
+}
+.buttons .facebook:hover a:before {
+  background-position: 0px -65px;
+}
+
+/* Twitter Button */
+
+.buttons .twitter a {
+  padding-left: 37.037037037037%;
+}
+.buttons .twitter a:hover {
+  color: #28aae1;
+}
+.buttons .twitter a:before {
+  background-position: 0px -130px;
+}
+.buttons .twitter:hover a:before {
+  background-position: 0px -195px;
+}
+
+
+
+
+
+
+
+
+
+
+

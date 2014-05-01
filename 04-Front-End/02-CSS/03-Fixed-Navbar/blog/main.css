@@ -4,3 +4,46 @@
 	font-family: 'Open Sans', sans-serif;
 }
 
+.nav-content {
+margin: 0 auto;
+width: 840px;
+}
+
+.content {
+padding-top: 110px;
+}
+
+.padding-right {
+  padding-right: 3em;
+}
+
+header {
+  margin : 0 auto;
+  background: black;
+  color: white;
+  position: fixed;
+  right: 0;
+  left: 0;
+  padding: 0;
+}
+
+nav {
+  display: inline;
+}
+
+nav a {
+  display: inline;
+  width: 100px;
+  line-height: 100px;
+  color: white;
+}
+
+header h1 {
+display: inline-block;
+width: 500px;
+margin-top: 0em;
+margin-bottom: 0em;
+}
+
+
+

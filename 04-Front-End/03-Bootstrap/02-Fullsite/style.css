@@ -1,0 +1,43 @@
+footer{
+  float: left;
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.wrapper{
+  margin-top: -20px;
+  bottom: auto;
+}
+
+#banner{
+  overflow: hidden;
+}
+
+
+#sign-in-section{
+  left: 200px;
+  top: 30%;
+}
+.join-box{
+  padding-top:10px;
+}
+
+.form-horizontal{
+  width: 500px;
+  margin: 100px auto 150px auto;
+  border: 1px solid #eee;
+  padding: 40px 30px;
+  margin-top: 30px;
+}
+
+.container{
+  margin-top: 100px;
+  margin-bottom: 50px;
+  min-height: 500px;
+}
+
+.jumbotron{
+  background-color: #FFF
+}

@@ -1,33 +1,6 @@
 /* =============================================================================
    Begin
    ========================================================================== */
-
-.container {
-  margin: 0 auto;
-  width: 80%;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.nav-content {
-  margin: 0 auto;
-}
-
-.content {
-  padding-top: 10px;
-}
-
-.padding {
-  padding: 1em 3em 0 0 ;
-}
-
-.right {
-  float: right
-}
-
-.marging{
-  margin : 0 30% 1em 30%;
-}
-
 body {
   background-image:url(img/back.png);
   height: 100%;
@@ -78,8 +51,65 @@ h2 {
   font-family: "Calibri", sans-serif;
 }
 
+.container {
+  margin: 0 auto;
+  width: 80%;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.nav-content {
+  margin: 0 auto;
+}
+
+.content {
+  padding-top: 10px;
+}
+
+.padding {
+  padding: 1em 3em 0 0 ;
+}
+
+.right {
+  float: right
+}
+
+.marging{
+  margin : 0 30% 1em 30%;
+}
+
 .center {
   text-align: center
+}
+
+/* Facebook Button */
+
+.buttons .facebook a {
+  padding-left: 27.777777777778%;
+}
+.buttons .facebook a:hover {
+  color: #3c5a98;
+}
+.buttons .facebook a:before {
+  background-position: 0px 0px;
+  left: 11.111111111111%;
+}
+.buttons .facebook:hover a:before {
+  background-position: 0px -65px;
+}
+
+/* Twitter Button */
+
+.buttons .twitter a {
+  padding-left: 30%;
+}
+.buttons .twitter a:hover {
+  color: #28aae1;
+}
+.buttons .twitter a:before {
+  background-position: 0px -130px;
+}
+.buttons .twitter:hover a:before {
+  background-position: 0px -195px;
 }
 
 .buttons {
@@ -132,41 +162,6 @@ h2 {
   margin-top: -27px;
   left: 4%;
 }
-
-
-/* Facebook Button */
-
-.buttons .facebook a {
-  padding-left: 27.777777777778%;
-}
-.buttons .facebook a:hover {
-  color: #3c5a98;
-}
-.buttons .facebook a:before {
-  background-position: 0px 0px;
-  left: 11.111111111111%;
-}
-.buttons .facebook:hover a:before {
-  background-position: 0px -65px;
-}
-
-/* Twitter Button */
-
-.buttons .twitter a {
-  padding-left: 30%;
-}
-.buttons .twitter a:hover {
-  color: #28aae1;
-}
-.buttons .twitter a:before {
-  background-position: 0px -130px;
-}
-.buttons .twitter:hover a:before {
-  background-position: 0px -195px;
-}
-
-
-
 
 
 

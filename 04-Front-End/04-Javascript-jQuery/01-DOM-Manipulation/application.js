@@ -40,10 +40,10 @@ function run_challenges() {
   });
 
   // Ex 9. Translate the #results list 20px downward (animation would be great ^_^)
-  $("ul").css({top: '20px'})
+  $("ul").css({top: '20px'});
 
   // Ex 10. Remove the "Email:" label from the DOM
-  $("label").remove()
+  $("label").remove();
 
   // Checking exercise answers. DO NOT MODIFY BELOW
   assert_equal(email, "boris@lewagon.org");

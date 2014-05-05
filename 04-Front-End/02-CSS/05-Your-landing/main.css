@@ -2,7 +2,6 @@
    Begin
    ========================================================================== */
 body {
-  background-image:url(img/back.png);
   height: 100%;
   width: 100%;
   margin: 0;
@@ -20,6 +19,7 @@ header {
 
 nav {
   display: inline;
+  background-color: grey;
 }
 
 nav a {
@@ -31,10 +31,10 @@ nav a {
   font-size: 1em;
 }
 
-
-article {
-  text-align: center;
+.back-left {
+  background-image:url(img/back.png);
 }
+
 
 h1 {
   color: white;
@@ -49,12 +49,6 @@ h2 {
   margin : 1em 0 0.5em 0;
   font-size: 2em;
   font-family: "Calibri", sans-serif;
-}
-
-.container {
-  margin: 0 auto;
-  width: 80%;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .nav-content {

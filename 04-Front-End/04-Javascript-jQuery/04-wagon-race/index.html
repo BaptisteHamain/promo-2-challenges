@@ -1,62 +1,32 @@
-<html>
-<head>
-  <title>Jeu de courses</title>
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="stylesheet" type="text/css" href="css/normalize.css">
-</head>
-<body>
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Wagon race</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<table class="racer_table">
-  <tr id="player1_race">
-    <td></td>
-    <td></td>
-    <td class="active"></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body>
 
-  </tr>
-  <tr id="player2_race">
-    <td></td>
-    <td></td>
-    <td></td>
-    <td class="active"></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table>
+    <div class="players">
+      <div id="player1_hint"></div>
+      <div id="player2_hint"></div>
+    </div>
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="modal.js" type="text/javascript" charset="utf-8"></script>
-</body>
+    <table class="racer_table">
+      <tr id="player1_race">
+        <td class="active"></td>
+      </tr>
+      <tr id="player2_race">
+        <td class="active"></td>
+      </tr>
+    </table>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/wagon-race.js"></script>
+  </body>
 </html>

@@ -1,83 +1,88 @@
 ## Objectives & Background
 
-We will take our last exercise Wagon-race and make it a little bit more interesting by adding a way to register the games we play on a server and store the results, through an API.
+We will create a JavaScript game : the wagon-race.
+It's a simple game where you must use your keyboard to make a Wagon go forward.
 
-For the API :
+Each player will advance their "wagon" by smashing some key.  For example, player 1 might be the "q" key and player 2 might be the "p" key.
 
-- [Here's the documentation](https://github.com/lewagon/wagon-race-api). **YOU NEED TO READ THE README**, it explains how the API works.
+The goal here is to learn more about JavaScript, jQuery, the DOM, and asynchronous event handling.
 
-- The API URL is : http://wagon-race-api.herokuapp.com/
+Before you start, you should read about [jQuery](http://learn.jquery.com/about-jquery/).  In particular, you should understand event handling and callback functions.
 
 ## Specs
 
-Your application will work like this :
+You will start by building a simple two-player board.  This will be rendered via HTML. There are a few ways you could do it, e.g., a table that looks like:
 
-- (1) When the page loads, you will ask the API to create a new Game Session with a GET request.
-- (2) When the Game Session is created, your page will display a button "Start a Game !"
-- (3) When clicked, this button will display a Form asking for the two players' names.
-- (4) When the form is submitted, your Javascript Application will make a POST request, providing the players names as data.
+### HTML
 
-For instance you will POST a json object like this one :
-  
-```javascript
-{
-  players: [
-    { name: "Johnny" },
-    { name: "Boris" }
-  ]
+```html
+<table class="racer_table">
+  <tr id="player1_race">
+    <td></td>
+    <td class="active"></td>
+    <td></td>
+    <td></td>
+    ... etc ...
+  </tr>
+  <tr id="player2_race">
+    <td></td>
+    <td></td>
+    <td></td>
+    <td class="active"></td>
+    ... etc ...
+  </tr>
+</table>
+```
+
+Then, using CSS, you can provide styles like:
+
+```css
+.racer_table td {
+  background-color: white;
+  height: 20px;
+  width: 20px;
+}
+
+.racer_table td.active {
+  background-color: black;
 }
 ```
 
-You will get back an Hash of informations about the game and the players, you can make use of it to display some informations about the current game to your users.
+You will then update a player's position by adding the `active` class to the appropriate `td`.  There are many other ways to achieve a sensible board output; this is just one suggestion.
 
-Example :
+Make sure you're able to "manually" produce all the board layouts you might care about before you jump into the JavaScript.  Whatever way you choose, it should be easy for jQuery/JavaScript to manipulate, so keep that in mind.
 
-```javascript
-{
-  status: 200,
-  session_id: 1,
-  game: {
-    id: 50,
-    status: 'started',
-    elapsed_time: 0,
-    players: [
-      { id: 1, name: "Johnny" },
-      { id: 2, name: "Boris" }
-    ]
-  }
-}
-```
+### Javascript
 
-- (5) When you receive the response from the server, it means the game has started, therefore you must display the game board (this is where the code from the last exercise takes place) and listen for users' inputs.
-- (6) When the game ends you must make a POST request to the API providing it with the winner data and the time spent on the game.
-- You will then get back an Hash of informations (same as earlier) about the game and the players. You MUST display those informations (it's like the score board at the end of the game) and you MUST provide a "Play again" button. When clicking the "Play again" button, you will start again at **(3)** (Asking for user names and POSTing to the API, and so on)
+We need some way for JavaScript to update the board state. Create simple JavaScript functions that can update a particular player's position.  You give the functions a player position as input and they update the underlying HTML to reflect the new position.
 
-### The API
-
-Each time you must make a call to the API (GET request, or POST request) take a look at https://github.com/lewagon/wagon-race-api .
-All endpoints are documented.
-
-For instance, when loading the page, you will need to make a `GET` request.
-The API URL is : http://wagon-race-api.herokuapp.com/
-The Endpoint is : /game/session/new
-Thus, you will need to make a `GET` request on `http://wagon-race-api.herokuapp.com/game/session/new`
-You will then get back a Hash that will look like this :
+It could look something like:
 
 ```javascript
-{
-  status: 200,
-  session_id: 1
-}
+update_player_position('player1', 10);
 ```
 
-This means that the Game Session has been created (`status: 200` means that everthing was fine on the server side) and the API gives you the session_id.
+Store this JavaScript in a separate file and use the JavaScript console to debug it and pass in values manually.
 
-Be careful to store the session_id somewhere because you will need it later.
-For instance, when creating a game inside a Game Session, you will need to `POST` to `/game/session/:session_id/new`
-The `:session_id` in the previous URL must be replaced with the id of the session you desire to create a game in.
+#### Binding to Key Presses
 
-If we got `session_id: 1`, our API Endpoint will be : `game/session/1/new`
+Now we'll make the game interactive!  Bind to the [keyup event](http://api.jquery.com/keyup/) to detect when a player has "pressed" a key.  We don't bind to the [keydown](http://api.jquery.com/keydown/) or [keypress](http://api.jquery.com/keypress/) events because those events fire when the keyboard repeats the key, whereas the keyup event doesn't.
 
-**If this is too simple for you**
+It'd be a boring game if you could just hold the key and go.  You want to bind to the `document`, like so:
 
-Create the API yourself.
+```javascript
+$(document).ready(function() {
+  $(document).on('keyup', function(event) {
+    // Detect which key was pressed and call the appropriate function
+    // Google "jquery keyup what key was pressed" if you don't know how
+  });
+});
+```
+
+#### Starting and Winning
+
+You must provide a way to restart the game, and tell who won the race.
+
+## If this is too simple for you
+
+Do the same but instead of mere functions, use Javascript object and prototypal inheritance (the Javascript way of creating Classes.)

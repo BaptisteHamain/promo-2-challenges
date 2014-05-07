@@ -46,7 +46,6 @@ function run_challenges() {
   var email = null;  // TODO: replace null, keep the email variable.
 
 
-
   // Ex 2. Fill the content of the email input with your email
 
 

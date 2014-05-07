@@ -1,10 +1,48 @@
-<html>
-<head>
-  <title>Modal</title>
-</head>
-<body>
-  <img src="http://eofdreams.com/data_images/dreams/image/image-07.jpg" data-modal-height="800" data-modal-width="600">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <script src="modal.js" type="text/javascript" charset="utf-8"></script>
-</body>
+    <title>Popin image plugin</title>
+
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/popin.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="column col-md-4">
+          <h2>Heading</h2>
+          <p><img src="img/1_1145_613.jpg" data-modal-width="1145" data-modal-height="613" alt="Aurore Boréale" /></p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="column col-md-4">
+          <h2>Heading</h2>
+          <p><img src="img/2_540_358.jpg" datal-modal-width="540" data-modal-height="358" alt="Aurore Boréale" /></p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="column col-md-4">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+      <footer>
+        <p>&copy; Company 2013</p>
+      </footer>
+      </div> <!-- /container -->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/popin.js"></script>
+    <script type="text/javascript">
+      $('.column img').popin();
+    </script>
+  </body>
 </html>
